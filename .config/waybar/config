@@ -1,0 +1,63 @@
+{
+    "position": "bottom",
+    "margin": "0",
+    "margin-bottom": 10,
+    "height": 30, // Waybar height (to be removed for auto height)
+    "width": 1000,
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": ["bluetooth", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "battery", "pulseaudio", "network", "hyprland/language"],
+    "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{icon}",
+         "format-icons": {
+             "default": "●",
+         }
+    },
+    "bluetooth": {
+        "format": " "
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "network": {
+          "format-disconnected" : "󰯡 Disconnected",
+          "format-ethernet" : "󰒢 100%",
+          "format-linked" : "󰖪 {essid} (No IP)",
+          "format-wifi" : "󰖩 {essid}",
+          "interval" : 1,
+          "tooltip" : false
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "US",
+        "format-ru": "RU",
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂅 {capacity}%",
+        "format-plugged": "{capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-full": "󰁹 {capacity}%",
+        "format-icons": ["󰁼", "󰁿", "󰂂"]
+	},
+}
+
